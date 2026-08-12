@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For My Bacha 🎂</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffe0ec,#eadfff,#dff3ff);color:#573044}
+.card{width:min(92%,440px);min-height:590px;padding:28px 23px;border-radius:30px;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(75,35,65,.18);text-align:center}
+.screen{display:none;animation:show .65s ease}.screen.active{display:block}
+h1{font-size:31px;color:#a33d70;margin:10px 0 18px}.emoji{font-size:62px;animation:pulse 1.5s infinite}.text{font-size:17px;line-height:1.7}.small{font-size:15px;line-height:1.7}
+.btn{border:0;border-radius:30px;padding:13px 21px;margin:7px 3px;background:#d85b91;color:white;font-size:15px;cursor:pointer;box-shadow:0 8px 18px rgba(216,91,145,.2)}
+.btn.light{background:white;color:#a33d70}
+.box{background:#fff1f7;border-radius:20px;padding:14px;margin:10px 0;line-height:1.6;text-align:left}
+.reveal{display:none}.reveal.show{display:block;animation:show .5s ease}
+.float{position:fixed;font-size:22px;opacity:.55;animation:float 7s linear infinite;pointer-events:none}
+@keyframes show{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes pulse{50%{transform:scale(1.1)}}@keyframes float{from{transform:translateY(105vh) rotate(0)}to{transform:translateY(-15vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="float" style="left:7%">♡</div><div class="float" style="left:24%;animation-delay:2s">✦</div><div class="float" style="left:72%;animation-delay:1s">♡</div><div class="float" style="left:90%;animation-delay:4s">✧</div>
+
+<div class="card">
+
+<section class="screen active" id="s1">
+<div class="emoji">👀❤️</div>
+<h1>Hey you…</h1>
+<p class="text">Tumhare liye kuch banaya hai.<br>But ek rule hai… 😌<br><b>Sab buttons press karne hain!</b> 😂❤️</p>
+<button class="btn" onclick="go(2)">OPEN MY SURPRISE 🎁</button>
+</section>
+
+<section class="screen" id="s2">
+<div class="emoji">🎂</div>
+<h1>Happy Birthday, Mera Bacha ❤️</h1>
+<p class="text">Happy Birthday to someone who became a very special part of my life. ❤️</p>
+<p class="small">Aaj ka din tumhara hai, isliye aaj bas smile karna hai. 🥹<br>Baaki tension kal se. 😂</p>
+<button class="btn" onclick="go(3)">NEXT →</button>
+</section>
+
+<section class="screen" id="s3">
+<div class="emoji">😂💬</div>
+<h1>Our little story…</h1>
+<p class="small">Hamari story mein sirf serious baatein nahi hain. 😂<br>Random talks, silly jokes, choti choti nok-jhok aur woh conversations jo “5 minutes” ke liye start hoti hain… aur pata nahi kab itni long ho jati hain. 😭❤️</p>
+<div class="box">💭 <b>Funny memory:</b><br>Ham dono normal baat start karte hain aur end mein pata nahi kis topic par pohanch jate hain. 😂</div>
+<div class="box">🫶 <b>Best part:</b><br>Simple si baat bhi yaad reh jati hai jab woh tumhare saath hui ho. ❤️</div>
+<button class="btn" onclick="go(4)">OUR NEXT STOP → 👀</button>
+</section>
+
+<section class="screen" id="s4">
+<div class="emoji">🫶</div>
+<h1>Things I Like About You</h1>
+<p class="small">Sab ek saath nahi bataungi… buttons khud press karo. 😌😂</p>
+
+<button class="btn" onclick="reveal(1)">Your smile ❤️</button>
+<button class="btn" onclick="reveal(2)">The way you talk 💬</button>
+<button class="btn" onclick="reveal(3)">Your caring side 🫶</button>
+<button class="btn" onclick="reveal(4)">Your funny side 😂</button>
+<button class="btn" onclick="reveal(5)">Our random talks 🌙</button>
+
+<div id="r1" class="box reveal">Tumhari smile genuinely mood better kar deti hai. ❤️</div>
+<div id="r2" class="box reveal">Tum jis tarah baat karte ho, usmein apni hi ek vibe hai. 😌</div>
+<div id="r3" class="box reveal">Tumhari choti choti caring things shayad tumhe normal lagti hain, but they matter. 🥹</div>
+<div id="r4" class="box reveal">Tum kabhi kabhi itne stupid hote ho ke hansi aa jati hai. 😂❤️</div>
+<div id="r5" class="box reveal">Hamari random conversations bhi meri favourite memories mein aa jati hain. ❤️</div>
+
+<button class="btn" onclick="go(5)">ONE LAST THING 🤫</button>
+</section>
+
+<section class="screen" id="s5">
+<div class="emoji">🤫💌</div>
+<h1>I have one more thing to tell you…</h1>
+<p class="text">Ye wala message thoda dil se hai. ❤️</p>
+<button class="btn" onclick="reveal('secret')">OPEN SECRET 🤫</button>
+<div id="rsecret" class="box reveal">
+Tumhare saath jo time spend hota hai, woh mere liye important hai. ❤️<br><br>
+Hamari funny baatein, random talks, choti nok-jhok aur woh little moments… sab mil kar apni ek cute si story bana dete hain. 🥹<br><br>
+I hope tum hamesha khush raho, bohat smile karo, aur life mein woh sab mile jo tum deserve karte ho. ✨
+</div>
+<button class="btn" onclick="go(6)">FINAL SURPRISE 🎂</button>
+</section>
+
+<section class="screen" id="s6">
+<div class="emoji">🎂❤️</div>
+<h1>Okay… surprise finished! 😭❤️</h1>
+<p class="text">Now go enjoy your birthday, birthday boy. 🎂</p>
+<p class="small"><b>Smile a lot. Eat lots of cake. Enjoy your day.</b> 😌❤️</p>
+<p class="small">And yes… you still owe me a treat. 😂</p>
+<p><b>Happy Birthday, Mera Bacha. 🫶</b></p>
+<button class="btn light" onclick="go(1)">PLAY AGAIN 🔄</button>
+</section>
+
+</div>
+<script>
+function go(n){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById('s'+n).classList.add('active');}
+function reveal(n){document.getElementById('r'+n).classList.toggle('show');}
+</script>
+</body>
+</html>
